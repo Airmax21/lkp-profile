@@ -15,7 +15,7 @@ const rightLink = {
 const NavbarComponent: FC<any> = () => {
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" className="rounded-b">
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Box sx={{ flex: 1 }} />
           <Link
