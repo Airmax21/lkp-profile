@@ -1,11 +1,14 @@
 import { FC } from "react";
-import { IntroCompany, NavbarComponent } from "@/components";
+import { AboutCompany, IntroCompany, NavbarComponent, NewsCompany, TrainingCompany } from "@/components";
 
 const HomeLayout: FC<any> = ({ children }) => {
   return (
     <>
       <NavbarComponent />
       <IntroCompany/>
+      <AboutCompany/>
+      <TrainingCompany/>
+      <NewsCompany/>
     </>
   );
 };

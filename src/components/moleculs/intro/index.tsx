@@ -1,21 +1,20 @@
 import * as React from "react";
-import { Button, Typography } from "@/components/atoms";
+import { Typography } from "@/components/atoms";
 import { Theme, styled } from "@mui/material/styles";
 import { SxProps } from "@mui/system";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-
-const backgroundImage =
-  "https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400";
+import { Asset1 } from "@/assets";
+import Image from "next/image";
 
 const IntroLayoutRoot = styled("section")(({ theme }) => ({
   color: theme.palette.common.white,
   position: "relative",
   display: "flex",
   alignItems: "center",
+  marginTop: 20,
   [theme.breakpoints.up("sm")]: {
-    height: "80vh",
+    height: "99vh",
     minHeight: 500,
     maxHeight: 1300,
   },
@@ -66,14 +65,6 @@ function IntroLayout(
           }}
         />
         <Background sx={sxBackground} />
-        <Box
-          height="16"
-          width="12"
-          alt="arrow down"
-          sx={{ position: "absolute", bottom: 32 }}
-        >
-            <ArrowDownwardIcon/>
-        </Box>
       </Container>
     </IntroLayoutRoot>
   );
@@ -83,16 +74,12 @@ const IntroCompany: React.FC<any> = () => {
   return (
     <IntroLayout
       sxBackground={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundColor: "#7fc7d9", // Average color of the background image.
+        backgroundImage: `url(assets-1.jpg)`,
+        backgroundColor: "#7fc7d9",
         backgroundPosition: "center",
       }}
     >
-      <img
-        style={{ display: "none" }}
-        src={backgroundImage}
-        alt="increase priority"
-      />
+      <Image style={{ display: "none" }} src={Asset1} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
         Selamat Datang di LKPSDM
       </Typography>
@@ -102,12 +89,14 @@ const IntroCompany: React.FC<any> = () => {
         variant="h5"
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
       >
-        Lembaga yang bertujuan untuk meningkatkan kemampuan dan keterampilan
-        individu dalam suatu organisasi atau masyarakat.
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum ante id tempor auctor. Donec tristique interdum elit, et iaculis lorem interdum pretium. Duis aliquet erat mauris, in rhoncus justo fermentum sit amet. In fermentum lectus sollicitudin, vehicula ligula nec, viverra lacus. Vivamus et quam sed nisl finibus accumsan eu nec ligula. Sed tristique magna ut est ullamcorper imperdiet. Proin a tellus vel quam tincidunt consectetur in non massa.
       </Typography>
-      <Typography variant="body1" color="inherit" sx={{ mt: 2 }}>
-        Pelajari Lebih Lanjut
-      </Typography>
+      <button
+        type="submit"
+        className="flex h-16 w-48 justify-center rounded-md px-3 items-center py-1.5 text-xl font-semibold leading-6 text-gray-100 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-900 hover:text-gray-500 hover:bg-blue-700"
+      >
+        Read More
+      </button>
     </IntroLayout>
   );
 };

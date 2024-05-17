@@ -5,7 +5,7 @@ const rawTheme = createTheme({
   palette: {
     primary: {
       light: '#69696a',
-      main: '#28282a',
+      main: '#8ecae6',
       dark: '#1e1e1f',
     },
     secondary: {
