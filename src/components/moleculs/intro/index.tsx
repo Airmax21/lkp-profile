@@ -91,12 +91,6 @@ const IntroCompany: React.FC<any> = () => {
       >
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum ante id tempor auctor. Donec tristique interdum elit, et iaculis lorem interdum pretium. Duis aliquet erat mauris, in rhoncus justo fermentum sit amet. In fermentum lectus sollicitudin, vehicula ligula nec, viverra lacus. Vivamus et quam sed nisl finibus accumsan eu nec ligula. Sed tristique magna ut est ullamcorper imperdiet. Proin a tellus vel quam tincidunt consectetur in non massa.
       </Typography>
-      <button
-        type="submit"
-        className="flex h-16 w-48 justify-center rounded-md px-3 items-center py-1.5 text-xl font-semibold leading-6 text-gray-100 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-blue-900 hover:text-gray-500 hover:bg-blue-700"
-      >
-        Read More
-      </button>
     </IntroLayout>
   );
 };

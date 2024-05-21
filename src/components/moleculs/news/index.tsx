@@ -76,6 +76,7 @@ const NewsCompany: FC<any> = () => {
               key={post.id}
               className="flex max-w-xl flex-col items-start justify-between"
             >
+              <Image src={post.cover} alt="cover" className="my-3 w-full"/>
               <div className="flex items-center gap-x-4 text-xs">
                 <time dateTime={post.datetime} className="text-gray-500">
                   {post.date}
@@ -94,7 +95,7 @@ const NewsCompany: FC<any> = () => {
                     {post.title}
                   </a>
                 </h3>
-                <Image src={post.cover} alt="cover" className="my-3 w-full"/>
+                
                 <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
                   {post.description}
                 </p>

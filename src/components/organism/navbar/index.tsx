@@ -7,12 +7,12 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Image from "next/image";
 import { LKP } from "@/assets";
 
-const pages = ["Home", "Pelatihan", "News"];
+const pages = ["Home", "Tentang Kami", "Pelatihan", "News"];
 
 const rightLink = {
-  fontSize: 16,
+  fontSize: 18,
   color: "common.black",
-  ml: 3,
+  mr: 4,
 };
 interface Props {
   window?: () => Window;
@@ -36,8 +36,8 @@ const NavbarComponent: FC<any> = () => {
   return (
     <>
       <ElevationScroll>
-        <AppBar>
-          <Toolbar className="mx-10" sx={{ justifyContent: "space-between" }}>
+        <AppBar sx={{backgroundColor: 'white'}}>
+          <Toolbar className="mx-10" >
             <Link
               variant="h6"
               underline="none"
@@ -47,11 +47,12 @@ const NavbarComponent: FC<any> = () => {
             >
               <Image src={LKP} alt="Logo" className="w-28" />
             </Link>
-            <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+            <Box sx={{ flex: 3, display: "flex", justifyContent: "center" }}>
               {pages.map((page) => (
+                // eslint-disable-next-line react/jsx-key
                 <Link
                   color="inherit"
-                  variant="h6"
+                  variant="caption"
                   underline="none"
                   href={"#" + page}
                   sx={rightLink}
