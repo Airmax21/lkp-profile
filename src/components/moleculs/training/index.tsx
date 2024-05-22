@@ -40,18 +40,18 @@ const TrainingCompany: FC<any> = () => {
   return (
     <div className="bg-indigo-100 py-24 sm:py-32 sm:px-6">
       <div className="mx-auto max-w-7xl lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <p className="mt-1 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Bidang Pelatihan
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600"></p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 sm:mx-3 lg:mt-24 lg:max-w-7xl">
           <dl className="mx-auto grid max-w-xl grid-cols-1 gap-x-5 gap-y-10 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
             {features.map((feature) => (
-              <div> 
-                <div className="bg-white max-w-sm rounded-xl overflow-hidden shadow-lg">
-                  <Image src={Asset1} alt="logo"/>
+              <div key={feature.name} className="flex justify-center">
+                <div className="bg-white max-w-sm sm:place-items-center rounded-xl overflow-hidden shadow-lg">
+                  <Image src={Asset1} alt="logo" />
                   <div className="px-6 py-4">
                     <div className="font-bold text-2xl mb-2">
                       {feature.name}

@@ -44,7 +44,7 @@ function IntroLayout(
     <IntroLayoutRoot>
       <Container
         sx={{
-          mt: 3,
+          mt: 10,
           mb: 14,
           display: "flex",
           flexDirection: "column",
