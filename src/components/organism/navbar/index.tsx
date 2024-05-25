@@ -45,7 +45,7 @@ function ElevationScroll(props: Props) {
   });
 }
 
-const NavbarComponent: FC<Props> = (props: Props) => {
+const NavbarComponent: FC<any> = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
