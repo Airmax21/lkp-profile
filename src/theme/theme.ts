@@ -5,7 +5,7 @@ const rawTheme = createTheme({
   palette: {
     primary: {
       light: '#69696a',
-      main: '#1E90FF',
+      main: '#00BFFF',
       dark: '#1e1e1f',
     },
     secondary: {
@@ -29,7 +29,7 @@ const rawTheme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'revert-layer',
+    fontFamily: 'Poppins',
     fontSize: 14,
     fontWeightLight: 300, // Work Sans
     fontWeightRegular: 400, // Work Sans

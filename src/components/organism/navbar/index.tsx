@@ -3,12 +3,14 @@ import { FC } from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import { AppBar, Toolbar, Typography } from "@/components/atoms";
+import MenuIcon from "@mui/icons-material/Menu";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Image from "next/image";
 import { LKP } from "@/assets";
 import {
   Divider,
   Drawer,
+  IconButton,
   List,
   ListItem,
   ListItemButton,
@@ -20,14 +22,15 @@ const pages = ["Home", "Tentang Kami", "Pelatihan", "News"];
 const rightLink = {
   fontSize: 18,
   color: "common.black",
-  mr: 4,
+  mr: 3,
 };
+
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
 }
 
-const drawerWidth = 240;
+const drawerWidth = 140;
 
 function ElevationScroll(props: Props) {
   const { children, window } = props;
@@ -42,8 +45,8 @@ function ElevationScroll(props: Props) {
   });
 }
 
-const NavbarComponent: FC<any> = (props: Props) => {
-  const { children, window } = props;
+const NavbarComponent: FC<Props> = (props: Props) => {
+  const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -53,7 +56,7 @@ const NavbarComponent: FC<any> = (props: Props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        LKP SDM
       </Typography>
       <Divider />
       <List>
@@ -73,61 +76,69 @@ const NavbarComponent: FC<any> = (props: Props) => {
 
   return (
     <>
-      <ElevationScroll>
-      <Box sx={{ display: 'flex' }}>
-          <AppBar sx={{ backgroundColor: "white" }}>
-            <Toolbar className="mx-10">
-              <Link
-                variant="h6"
-                underline="none"
-                color="inherit"
-                href="/"
-                sx={{ fontSize: 24 }}
-              >
-                <Image
-                  src={LKP}
-                  alt="Logo"
-                  className="max-w-36 mx-auto justify-end"
-                />
-              </Link>
-              <Box sx={{ flex: 3, display: "flex", justifyContent: "center" }}>
-                {pages.map((page) => (
-                  // eslint-disable-next-line react/jsx-key
-                  <Link
-                    color="inherit"
-                    variant="caption"
-                    underline="none"
-                    href={"#" + page}
-                    sx={rightLink}
-                  >
-                    {page}
-                  </Link>
-                ))}
-              </Box>
-            </Toolbar>
-          </AppBar>
-          <nav>
-            <Drawer
-              container={container}
-              variant="temporary"
-              open={mobileOpen}
-              onClose={handleDrawerToggle}
-              ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
-              }}
-              sx={{
-                display: { xs: "block", sm: "none" },
-                "& .MuiDrawer-paper": {
-                  boxSizing: "border-box",
-                  width: drawerWidth,
-                },
-              }}
+      <ElevationScroll {...props}>
+        <AppBar sx={{ backgroundColor: "theme.palette.primary.main" }}>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
             >
-              {drawer}
-            </Drawer>
-          </nav>
-        </Box>
+              <MenuIcon sx={{color: 'black'}} />
+            </IconButton>
+            <Link
+              variant="h6"
+              underline="none"
+              color="inherit"
+              href="/"
+              sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}
+            >
+              <Image
+                src={LKP}
+                alt="Logo"
+                className="max-w-32 justify-center"
+              />
+            </Link>
+            <Box sx={{ flex: 4, display: { xs: "none", sm: "flex" }, justifyContent: "flex-end" }}>
+              {pages.map((page) => (
+                <Link
+                  key={page}
+                  color="inherit"
+                  variant="caption"
+                  underline="none"
+                  href={"#" + page}
+                  sx={rightLink}
+                >
+                  {page}
+                </Link>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
       </ElevationScroll>
+      <Box component="nav">
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+      <Toolbar />
     </>
   );
 };

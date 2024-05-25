@@ -12,7 +12,6 @@ const IntroLayoutRoot = styled("section")(({ theme }) => ({
   position: "relative",
   display: "flex",
   alignItems: "center",
-  marginTop: 20,
   [theme.breakpoints.up("sm")]: {
     height: "99vh",
     minHeight: 500,

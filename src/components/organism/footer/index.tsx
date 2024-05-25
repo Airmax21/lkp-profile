@@ -1,16 +1,17 @@
 import { LKP } from "@/assets";
+import theme from "@/theme/theme";
 import Image from "next/image";
 import { FC } from "react";
 
 const FooterComponent: FC<any> = () => {
   return (
     <>
-      <footer className="relative bg-indigo-200 pt-8 pb-6">
+      <footer className="relative pt-8 pb-6" style={{backgroundColor: `${theme.palette.primary.main}`}}>
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
               <Image src={LKP} alt="logo" className="w-1/4"/>
-              <h5 className="text-lg mt-0 mb-2 text-gray-600">
+              <h5 className="text-lg mt-0 mb-2">
                 LKP SDM
               </h5>
               <div className="mt-6 lg:mb-0 mb-6">
@@ -76,7 +77,7 @@ const FooterComponent: FC<any> = () => {
               </div>
             </div>
           </div>
-          <hr className="my-6 border-gray-400" />
+          <hr className="my-6 border-gray-900" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-blueGray-500 font-semibold py-1">

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { AboutCompany, FooterComponent, IntroCompany, NavbarComponent, NewsCompany, TrainingCompany } from "@/components";
+import { AboutCompany, FooterComponent, IntroCompany, NavbarComponent, NewsCompany, PurposeComponent, TrainingCompany } from "@/components";
 
 const HomeLayout: FC<any> = ({ children }) => {
   return (
@@ -7,6 +7,7 @@ const HomeLayout: FC<any> = ({ children }) => {
       <NavbarComponent />
       <IntroCompany/>
       <AboutCompany/>
+      <PurposeComponent/>
       <TrainingCompany/>
       <NewsCompany/>
       <FooterComponent/>
