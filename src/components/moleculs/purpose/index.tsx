@@ -1,9 +1,9 @@
 import { FC } from "react";
 import {
   ArrowPathIcon,
-  CloudArrowUpIcon,
+  UserPlusIcon,
   FingerPrintIcon,
-  LockClosedIcon,
+  BookOpenIcon,
 } from "@heroicons/react/24/outline";
 
 const features = [
@@ -11,13 +11,13 @@ const features = [
     name: "Mengusahakan terbentuknya Sumber Daya Manusia yang berakhlak mulia",
     description:
       "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    icon: CloudArrowUpIcon,
+    icon: UserPlusIcon,
   },
   {
     name: "Memberikan dorongan dan bimbingan kepada personil untuk siap menjadi pemimpin dan penggerak baik di dalam Organisasi maupun di kalangan masyarakat",
     description:
       "Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.",
-    icon: LockClosedIcon,
+    icon: BookOpenIcon,
   },
   {
     name: "Membangun karakter yang bertanggung jawab serta memiliki jiwa solidaritas yang tinggi",
@@ -30,7 +30,7 @@ const features = [
 const PurposeComponent: FC<any> = () => {
   return (
     <>
-      <div className="bg-white py-24 sm:py-32">
+      <div id="Tujuan" className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-indigo-600">

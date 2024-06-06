@@ -17,7 +17,7 @@ import {
   ListItemText,
 } from "@mui/material";
 
-const pages = ["Home", "Tentang Kami", "Pelatihan", "News"];
+const pages = ["Home", "Tentang Kami", "Tujuan", "Pelatihan", "News"];
 
 const rightLink = {
   fontSize: 18,

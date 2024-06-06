@@ -1,2 +1,2 @@
 import HomeLayout from "./home";
-export { HomeLayout,  }
+export { HomeLayout}

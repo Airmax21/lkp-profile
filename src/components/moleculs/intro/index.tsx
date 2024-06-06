@@ -40,7 +40,7 @@ function IntroLayout(
   const { sxBackground, children } = props;
 
   return (
-    <IntroLayoutRoot>
+    <IntroLayoutRoot id="Home">
       <Container
         sx={{
           mt: 10,
