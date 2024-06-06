@@ -22,7 +22,7 @@ const pages = ["Home", "Tentang Kami", "Pelatihan", "News"];
 const rightLink = {
   fontSize: 18,
   color: "common.black",
-  mr: 3,
+  mr: 4,
 };
 
 interface Props {
@@ -42,6 +42,12 @@ function ElevationScroll(props: Props) {
 
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
+    sx: {
+      backgroundColor: 'white',
+      boxShadow: trigger
+        ? '0px 4px 6px -1px rgba(173, 216, 230, 0.7), 0px 2px 4px -1px rgba(173, 216, 230, 0.5)'
+        : 'none',
+    },
   });
 }
 
@@ -77,7 +83,7 @@ const NavbarComponent: FC<any> = (props: Props) => {
   return (
     <>
       <ElevationScroll {...props}>
-        <AppBar sx={{ backgroundColor: "theme.palette.primary.main" }}>
+        <AppBar sx={{ backgroundColor: "white" }}>
           <Toolbar>
             <IconButton
               color="inherit"
@@ -86,7 +92,7 @@ const NavbarComponent: FC<any> = (props: Props) => {
               onClick={handleDrawerToggle}
               sx={{ mr: 2, display: { sm: "none" } }}
             >
-              <MenuIcon sx={{color: 'black'}} />
+              <MenuIcon sx={{ color: 'black' }} />
             </IconButton>
             <Link
               variant="h6"
@@ -101,7 +107,7 @@ const NavbarComponent: FC<any> = (props: Props) => {
                 className="max-w-32 justify-center"
               />
             </Link>
-            <Box sx={{ flex: 4, display: { xs: "none", sm: "flex" }, justifyContent: "flex-end" }}>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" }, alignItems: "center" }}>
               {pages.map((page) => (
                 <Link
                   key={page}

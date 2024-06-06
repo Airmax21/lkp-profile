@@ -39,7 +39,7 @@ const features = [
 
 const TrainingCompany: FC<any> = () => {
   return (
-    <div className="py-24 sm:py-32 sm:px-6" style={{backgroundColor: `${theme.palette.primary.main}`}}>
+    <div className="py-24 sm:py-32 sm:px-6 bg-gray-100">
       <div className="mx-auto max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="mt-1 text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -54,10 +54,10 @@ const TrainingCompany: FC<any> = () => {
                 <div className="bg-white max-w-sm sm:place-items-center rounded-xl overflow-hidden shadow-lg">
                   <Image src={Asset1} alt="logo" />
                   <div className="px-6 py-4">
-                    <div className="font-bold text-2xl mb-2">
+                    <div className="font-bold text-2xl mb-2 text-center">
                       {feature.name}
                     </div>
-                    <p className="text-gray-700 text-sm">
+                    <p className="text-gray-700 text-sm text-center">
                       {feature.description}
                     </p>
                   </div>

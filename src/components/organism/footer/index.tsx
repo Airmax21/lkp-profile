@@ -6,7 +6,7 @@ import { FC } from "react";
 const FooterComponent: FC<any> = () => {
   return (
     <>
-      <footer className="relative pt-8 pb-6" style={{backgroundColor: `${theme.palette.primary.main}`}}>
+      <footer className="relative pt-8 pb-6 bg-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
