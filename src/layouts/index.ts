@@ -1,2 +1,4 @@
 import HomeLayout from "./home";
-export { HomeLayout}
+import NewsLayout from "./news";
+
+export { HomeLayout, NewsLayout }
