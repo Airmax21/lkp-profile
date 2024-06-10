@@ -68,9 +68,13 @@ const NavbarComponent: FC<any> = (props: Props) => {
       <List>
         {pages.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
+            <Link href={"/#" + item} color="inherit"
+              variant="caption"
+              underline="none" passHref>
+              <ListItemButton sx={{ textAlign: "left" }}>
+                <ListItemText primary={item} />
+              </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -114,7 +118,7 @@ const NavbarComponent: FC<any> = (props: Props) => {
                   color="inherit"
                   variant="caption"
                   underline="none"
-                  href={"#" + page}
+                  href={"/#" + page}
                   sx={rightLink}
                 >
                   {page}

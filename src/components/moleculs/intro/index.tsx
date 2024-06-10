@@ -88,7 +88,7 @@ const IntroCompany: React.FC<any> = () => {
         variant="h5"
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
       >
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque rutrum ante id tempor auctor. Donec tristique interdum elit, et iaculis lorem interdum pretium. Duis aliquet erat mauris, in rhoncus justo fermentum sit amet. In fermentum lectus sollicitudin, vehicula ligula nec, viverra lacus. Vivamus et quam sed nisl finibus accumsan eu nec ligula. Sed tristique magna ut est ullamcorper imperdiet. Proin a tellus vel quam tincidunt consectetur in non massa.
+       Investasi Terbaik untuk Sumber Daya Manusia Unggul.
       </Typography>
     </IntroLayout>
   );

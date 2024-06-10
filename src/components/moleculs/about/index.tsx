@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutCompany: FC<any> = () => {
   return (
-    <div id="Tentang Kami" className="relative my-5 overflow-hidden bg-white">
+    <div id="Tentang Kami" className="relative my-10 overflow-hidden bg-white">
       <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">

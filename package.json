@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -17,9 +18,11 @@
     "@mui/material": "^5.15.17",
     "@strapi/blocks-react-renderer": "^1.0.1",
     "next": "14.2.3",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "react-material-ui-carousel": "^3.4.2"
+    "react-material-ui-carousel": "^3.4.2",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "^20",
