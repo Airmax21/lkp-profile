@@ -12,7 +12,7 @@ const FooterComponent: FC<any> = () => {
             <div className="w-full lg:w-6/12 px-4">
               <Image src={LKP} alt="logo" className="w-1/4"/>
               <h5 className="text-lg mt-0 mb-2">
-                LKP SDM
+              Lembaga Peningkatan Kapasitas Sumber Daya Manusia (LPKSDM)
               </h5>
               <div className="mt-6 lg:mb-0 mb-6">
                 <button
@@ -87,7 +87,7 @@ const FooterComponent: FC<any> = () => {
                   className="text-blueGray-500 hover:text-gray-800"
                   target="_blank"
                 />{" "}
-                LKPSDM
+                Lembaga Peningkatan Kapasitas Sumber Daya Manusia (LPKSDM)
               </div>
             </div>
           </div>

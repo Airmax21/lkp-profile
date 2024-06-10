@@ -80,7 +80,7 @@ const IntroCompany: React.FC<any> = () => {
     >
       <Image style={{ display: "none" }} src={Asset1} alt="increase priority" />
       <Typography color="inherit" align="center" variant="h2" marked="center">
-        Selamat Datang di LKPSDM
+        Selamat Datang di Lembaga Peningkatan Kapasitas Sumber Daya Manusia (LPKSDM)
       </Typography>
       <Typography
         color="inherit"

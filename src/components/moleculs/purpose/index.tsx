@@ -37,7 +37,7 @@ const PurposeComponent: FC<any> = () => {
               SDM Unggul, Bisnis Sukses
             </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Tujuan LKP SDM
+              Tujuan Lembaga Peningkatan Kapasitas Sumber Daya Manusia (LPKSDM)
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               bertujuan untuk meningkatkan kualitas sumber daya manusia melalui penyelenggaraan berbagai program pelatihan dan kursus yang relevan dengan kebutuhan dunia kerja dan industri.
