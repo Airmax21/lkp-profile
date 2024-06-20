@@ -15,30 +15,18 @@ const FooterComponent: FC<any> = () => {
               Lembaga Peningkatan Kapasitas Sumber Daya Manusia (LPKSDM)
               </h5>
               <div className="mt-6 lg:mb-0 mb-6">
-                <button
+                <a href="mailto:lpksdm.yogyakarta@gmail.com"><button
                   className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-twitter"></i>
-                </button>
-                <button
-                  className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  <i className="fa fa-envelope"></i>
+                </button></a>
+                <a href="tel:+6282246973197"><button
+                  className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
                 >
-                  <i className="fab fa-facebook-square"></i>
-                </button>
-                <button
-                  className="bg-white text-gray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-instagram"></i>
-                </button>
-                <button
-                  className="bg-white text-gray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <i className="fab fa-linkedin"></i>
-                </button>
+                  <i className="fa fa-phone"></i>
+                </button></a>
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
